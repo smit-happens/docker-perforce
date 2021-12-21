@@ -1,5 +1,5 @@
-FROM ambakshi/perforce-base
-MAINTAINER Amit Bakshi <ambakshi@gmail.com>
+FROM smitstain/perforce-base
+LABEL author="Amit Bakshi ambakshi@gmail.com"
 
 ARG P4_VERSION=19.1
 

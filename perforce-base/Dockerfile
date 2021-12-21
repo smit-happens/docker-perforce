@@ -1,6 +1,5 @@
-ARG P4_BASEIMAGE=centos@sha256:a799dd8a2ded4a83484bbae769d97655392b3f86533ceb7dd96bbac929809f3c
-FROM $P4_BASEIMAGE
-MAINTAINER Amit Bakshi <ambakshi@gmail.com>
+FROM centos:7
+LABEL author="Amit Bakshi ambakshi@gmail.com"
 
 ENV container docker
 
@@ -24,8 +23,7 @@ ARG S6_OVERLAY_VERSION=1.22.1.0
 ARG TINI_VERSION=0.18.0
 ARG SYSTEMCTL_GITSHA1=73b5aff2ba6abfd254d236f1df22ff4971d44660
 
-RUN sed -ir '/\[updates\].*/a enabled=1' /etc/yum.repos.d/CentOS-Base.repo && \
-    yum install -y epel-release cronie-anacron tar gzip curl openssl which sudo initscripts sysvinit at && \
+RUN yum install -y epel-release cronie-anacron tar gzip curl openssl which sudo initscripts sysvinit at && \
     echo -ne '[perforce]\nname=Perforce\nbaseurl=http://package.perforce.com/yum/rhel/7/x86_64\nenabled=1\ngpgcheck=1\n' > /etc/yum.repos.d/perforce.repo && \
     rpm --import https://package.perforce.com/perforce.pubkey && \
     yum clean all --enablerepo='*' && \

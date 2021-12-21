@@ -1,5 +1,5 @@
 FROM phusion/baseimage:0.9.16
-MAINTAINER Amit Bakshi <ambakshi@gmail.com>
+LABEL author="Amit Bakshi ambakshi@gmail.com"
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN curl -fsSL http://package.perforce.com/perforce.pubkey | apt-key add - 
