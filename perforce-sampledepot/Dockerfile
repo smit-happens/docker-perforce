@@ -1,5 +1,5 @@
-FROM ambakshi/perforce-server
-MAINTAINER Amit Bakshi <ambakshi@gmail.com>
+FROM smitstain/perforce-server
+LABEL author="Amit Bakshi ambakshi@gmail.com"
 
 RUN curl -sSL ftp://ftp.perforce.com/perforce/tools/sampledepot.tar.gz > sampledepot.tar.gz
 
