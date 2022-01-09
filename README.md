@@ -7,7 +7,7 @@ A collection of [Perforce](http://perforce.com) docker images:
 - Perforce Git Fusion
 - Perforce Swarm
 
-![Docker Pulls](https://img.shields.io/docker/pulls/mashape/kong.svg)
+![Docker Pulls](https://img.shields.io/docker/pulls/smitstain/kong.svg)
 
 ## Installation
 
